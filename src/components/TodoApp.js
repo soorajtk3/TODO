@@ -13,7 +13,7 @@ const TodoApp = () => {
   const handleChange = (index) => {
     // setChecked(!checked)
     const updatedTodos = todos.map((todo, i) =>
-      i === index ? { ...todo, status: "done" } : todo
+      i === index ? { ...todo, status: todo.status === "done" ? "" : "done" } : todo
     );
     setTodos(updatedTodos);
   };
